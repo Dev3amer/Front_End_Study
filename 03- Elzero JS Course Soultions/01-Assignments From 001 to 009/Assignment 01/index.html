@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+        // Code One ==> This Will not Run Because There is no Element With ID = "el" Defined Before it.
+        document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+        // Code Two ==> This Will Run Because it Will Run After Document Loaded. 
+        window.onload = function () {
+            document.getElementById("el").style.color = "red";
+        };
+    </script>
+</head>
+
+<body>
+    <h1 id="el">Page Title</h1>
+    <script>
+        // Code Three ==> This Will Run Because There is Element With ID = "el" Defined Before it.
+        document.getElementById("el").style.color = "red";
+    </script>
+</body>
+
+</html>
